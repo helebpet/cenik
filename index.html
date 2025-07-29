@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Provence - Ceník služeb</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rockwell', 'Courier New', serif;
+            line-height: 1.4;
+            color: #800080;
+            background: #fff;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #800080;
+        }
+
+        .salon-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #4b0082;
+            font-family: 'Dancing Script', 'Pacifico', 'Great Vibes', 'Mr Dafoe', cursive;
+        }
+
+        .validity {
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #800080;
+        }
+
+        .section-header {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 30px 0 20px 0;
+            color: #4b0082;
+            font-family: 'Dancing Script', 'Pacifico', 'Great Vibes', 'Mr Dafoe', cursive;
+        }
+
+        .service-button {
+            display: block;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #800080;
+            color: #800080;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Rockwell', 'Courier New', serif;
+            border-radius: 8px;
+        }
+
+        .service-button:hover {
+            background: #800080;
+            color: #fff;
+        }
+
+        .service-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-details {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .service-name {
+            font-weight: normal;
+        }
+
+        .service-description {
+            font-style: italic;
+            font-size: 13px;
+            margin-top: 2px;
+            color: #b366b3;
+        }
+
+        .service-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .service-duration {
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        .service-price {
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #800080;
+            font-size: 12px;
+            text-align: center;
+            color: #800080;
+        }
+
+        .cancellation-policy {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #800080;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #800080;
+        }
+
+        .contact-info a {
+            color: #800080;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .service-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .service-details {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+
+            .service-right {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="salon-name">Salon Provence</div>
+        <div class="validity">platnost od 1.8.2025</div>
+    </div>
+
+    <div class="section-header">Pedikúra</div>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Mokrá pedikúra</div>
+                <div class="service-description">(odstranění ztvrdlé kůže, peeling, úprava nehtů, masáž)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">60 min</div>
+                <div class="service-price">580,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Suchá pedikúra – přístrojová</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">60 min</div>
+                <div class="service-price">580,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Samostatné stříhání nehtů včetně čištění, pilování</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">320,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Samostatné ošetření kuřího oka / zarostlého nehtu</div>
+                <div class="service-description">(cena za 1 nehet / kuří oko)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">320,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Nehtová spona – rovnátko PODOFIX</div>
+                <div class="service-description">(cena za 1 ks)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">150,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Kontrola rovnátka + úprava nehtu</div>
+                <div class="service-description">(1 ks)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">500,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Lakování</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">90,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Odstranění akryl / gel laku</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">100,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Parafínový zábal na ruce / nohy</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">25 min</div>
+                <div class="service-price">350,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Termo zábal na ruce / nohy</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">25 min</div>
+                <div class="service-price">350,-</div>
+            </div>
+        </div>
+    </button>
+
+    <div class="section-header">Kosmetika</div>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Celkové kosmetické ošetření</div>
+                <div class="service-description">(odlíčení a očištění obličeje a dekoltu, diamantová mikrodermabraze, masáž, maska, sérum a závěrečný krém + úprava obočí, depilace rtu)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">75 min</div>
+                <div class="service-price">950,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Lifting - galvanické ošetření pleti</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">30 min</div>
+                <div class="service-price">500,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Hloubkové čištění pleti ultrazvukovou špachtlí + ošetření sérem</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">20 min</div>
+                <div class="service-price">500,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Úprava obočí</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">100,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Barvení obočí</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">120,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Depilace samostržným voskem - ret</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">100,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Depilace samostržným voskem - brada</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">120,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Depilace samostržným voskem - horní ret, pejzy</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">250,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Depilace samostržným voskem - podpaží</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration"></div>
+                <div class="service-price">200,-</div>
+            </div>
+        </div>
+    </button>
+
+    <div class="section-header">Masáže</div>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Záda, šíje</div>
+                <div class="service-description">(odstranění ztvrdlé kůže, peeling, úprava nehtů, masáž)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">45 min</div>
+                <div class="service-price">600,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Záda, šíje</div>
+                <div class="service-description">(na masážní židli)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">20 min</div>
+                <div class="service-price">450,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Celé tělo</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">75 min</div>
+                <div class="service-price">850,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Brussova masáž páteře</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">45 min</div>
+                <div class="service-price">600,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Relaxční masáž aroma olejem</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">60 min</div>
+                <div class="service-price">850,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Medová detoxikační masáž</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">45 min</div>
+                <div class="service-price">650,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Čokoládová masáž se zábalem</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">75 min</div>
+                <div class="service-price">900,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Rašelinový zábal s masáží</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">30 min</div>
+                <div class="service-price">600,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Anticelulitidová s ozon. zábalem</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">45 min</div>
+                <div class="service-price">750,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Peeling celého těla</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">45 min</div>
+                <div class="service-price">650,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Masáž lávovými kameny - celého těla</div>
+                <div class="service-description">(obličej, dekolt, ruce, nohy, záda)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">75 min</div>
+                <div class="service-price">900,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Masáž lávovými kameny - částečná</div>
+                <div class="service-description">(obličej, dekolt, ruce, záda)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">50 min</div>
+                <div class="service-price">800,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Masáž lávovými kameny - záda, šíje</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">35 min</div>
+                <div class="service-price">700,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Těhotenská masáž</div>
+                <div class="service-description">(celého těla vleže)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">35 min</div>
+                <div class="service-price">500,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Thajská masáž nohou</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">20 min</div>
+                <div class="service-price">500,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Antistresová masáž hlavy a chodidel</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">20 min</div>
+                <div class="service-price">500,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Indická masáž hlavy</div>
+                <div class="service-description">(vsedě)</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">20 min</div>
+                <div class="service-price">500,-</div>
+            </div>
+        </div>
+    </button>
+
+    <button class="service-button">
+        <div class="service-content">
+            <div class="service-details">
+                <div class="service-name">Infrasauna — pouze k masáži</div>
+            </div>
+            <div class="service-right">
+                <div class="service-duration">30 min</div>
+                <div class="service-price">250,-</div>
+            </div>
+        </div>
+    </button>
+
+    <div class="footer">
+        <div class="cancellation-policy">
+            Storno poplatek 50 % z ceny procedury při nedostavení se nebo zrušení méně než 24 hodin předem (platí i pro objednávky na poukaz).
+        </div>
+        <div class="contact-info">
+            <br>
+            <a href="#">www.salon-provence.cz</a> | Facebook: Salon Provence | tel. <a href="tel:737055008">737 055 008</a>
+        </div>
+    </div>
+</body>
+</html>
