@@ -36,7 +36,18 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            background: url('back.jpg') center center/cover repeat;
+        }
+
+        /* Background image as 5% opacity with an absolutely positioned div behind everything */
+        .background-image {
+            position: fixed;
+            z-index: -1;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: url('back.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+            opacity: 0.05;
+            pointer-events: none;
         }
 
         .header {
@@ -47,7 +58,7 @@
         }
 
         .salon-name {
-            font-size: 32px;
+            font-size: 64px;
             font-weight: 300;
             margin-bottom: 5px;
             color: var(--dark-purple);
@@ -56,7 +67,7 @@
         }
 
         .validity {
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 20px;
             font-style: italic;
             color: var(--purple);
@@ -66,16 +77,16 @@
         }
 
         .section-header {
-            font-size: 28px;
+            font-size: 48px;
             font-weight: 300;
-            margin: 30px 0 20px 0;
+            margin: 40px 0 28px 0;
             color: var(--dark-purple);
             font-family: "thirsty-rough-two", sans-serif;
             font-style: normal;
             letter-spacing: 0.5px;
             background: var(--glass-bg);
-            padding: 4px 16px;
-            border-radius: 12px;
+            padding: 8px 32px;
+            border-radius: 18px;
             backdrop-filter: blur(3px);
             display: inline-block;
         }
@@ -86,9 +97,9 @@
             background: var(--glass-bg);
             border: 1.5px solid var(--glass-border);
             color: var(--purple);
-            padding: 12px 15px;
-            margin-bottom: 8px;
-            font-size: 14px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            font-size: 16px;
             text-align: left;
             cursor: pointer;
             transition: 
@@ -125,13 +136,13 @@
         .service-name {
             font-weight: normal;
             font-family: 'Rockwell', 'Courier New', serif;
-            font-size: 18px;
+            font-size: 22px;
             color: var(--purple);
         }
 
         .service-description {
             font-style: italic;
-            font-size: 13px;
+            font-size: 15px;
             margin-top: 2px;
             color: var(--lavender);
             font-family: 'Rockwell', 'Courier New', serif;
@@ -139,7 +150,7 @@
 
         .service-right {
             display: flex;
-            gap: 15px;
+            gap: 18px;
             align-items: center;
         }
 
@@ -153,28 +164,29 @@
             white-space: nowrap;
         }
 
+        /* Footer as a plain rectangle, no border, no background glass, no border-radius */
         .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--purple);
-            font-size: 12px;
+            margin-top: 48px;
+            padding: 24px 0 12px 0;
+            font-size: 15px;
             text-align: center;
             color: var(--purple);
-            background: var(--glass-bg);
-            border-radius: 12px;
-            backdrop-filter: blur(3px);
+            background: none;
+            border: none;
+            border-radius: 0;
+            backdrop-filter: none;
         }
 
         .cancellation-policy {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             font-weight: normal;
             color: var(--purple);
             font-family: 'Rockwell', 'Courier New', serif;
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .contact-info {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--purple);
         }
 
@@ -186,6 +198,13 @@
         @media (max-width: 600px) {
             body {
                 padding: 10px;
+            }
+            .salon-name {
+                font-size: 36px;
+            }
+            .section-header {
+                font-size: 26px;
+                padding: 6px 12px;
             }
             .service-content {
                 flex-direction: column;
@@ -204,6 +223,7 @@
     </style>
 </head>
 <body>
+    <div class="background-image"></div>
     <div class="header">
         <div class="salon-name">Salon Provence</div>
         <div class="validity">platnost od 1.8.2025</div>
@@ -223,7 +243,6 @@
             </div>
         </div>
     </button>
-
     <button class="service-button">
         <div class="service-content">
             <div class="service-details">
@@ -246,7 +265,6 @@
             </div>
         </div>
     </button>
-
     <button class="service-button">
         <div class="service-content">
             <div class="service-details">
@@ -643,7 +661,6 @@
             Storno poplatek 50 % z ceny procedury při nedostavení se nebo zrušení méně než 24 hodin předem (platí i pro objednávky na poukaz).
         </div>
         <div class="contact-info">
-            <br>
             <a href="#">www.salon-provence.cz</a> | Facebook: Salon Provence | tel. <a href="tel:737055008">737 055 008</a>
         </div>
     </div>
