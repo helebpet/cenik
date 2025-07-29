@@ -57,13 +57,12 @@
             border-bottom: 1px solid var(--purple);
         }
 
-        .salon-name {
-            font-size: 64px;
-            font-weight: 300;
-            margin-bottom: 5px;
-            color: var(--dark-purple);
-            font-family: "thirsty-rough-two", sans-serif;
-            font-style: normal;
+        .logo-img {
+            display: block;
+            margin: 0 auto 8px auto;
+            max-width: 310px;
+            width: 100%;
+            height: auto;
         }
 
         .validity {
@@ -201,8 +200,8 @@
             body {
                 padding: 10px;
             }
-            .salon-name {
-                font-size: 36px;
+            .logo-img {
+                max-width: 180px;
             }
             .section-header {
                 font-size: 26px;
@@ -227,7 +226,8 @@
 <body>
     <div class="background-image"></div>
     <div class="header">
-        <div class="salon-name">Salon Provence</div>
+        <!-- Replace text headline with logo instead -->
+        <img src="logo.png" alt="Salon Provence logo" class="logo-img">
         <div class="validity">platnost od 1.8.2025</div>
     </div>
 
