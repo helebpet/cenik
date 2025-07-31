@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Provence - Ceník služeb</title>
-    <!-- Thirsty Rough Two from Typekit -->
+    <!-- Dreaming Out Loud Script Slant from Typekit -->
     <link rel="stylesheet" href="https://use.typekit.net/kmg2onn.css">
     <style>
         :root {
@@ -75,13 +75,35 @@
             font-style: normal;
         }
 
+        .reserve-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--purple), var(--dark-purple));
+            color: white;
+            padding: 16px 32px;
+            margin: 20px 0 30px 0;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(128, 0, 128, 0.3);
+            transition: all 0.3s ease;
+            font-family: 'Rockwell', 'Courier New', serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .reserve-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(128, 0, 128, 0.4);
+            background: linear-gradient(135deg, var(--dark-purple), var(--purple));
+        }
+
         .section-header {
             font-size: 48px;
-            font-weight: 300;
+            font-weight: 400;
             margin: 40px 0 28px 0;
             color: var(--dark-purple);
-            font-family: "thirsty-rough-two", sans-serif;
-            font-style: normal;
+            font-family: "dreaming-outloud-scriptslant", sans-serif;
+            font-style: italic;
             letter-spacing: 0.5px;
             background: var(--glass-bg);
             padding: 8px 32px;
@@ -163,7 +185,7 @@
             white-space: nowrap;
         }
 
-        /* Footer as a plain rectangle, no border, no background glass, no border-radius */
+        /* Footer unified font styling */
         .footer {
             margin-top: 48px;
             padding: 24px 0 12px 0;
@@ -174,6 +196,7 @@
             border: none;
             border-radius: 0;
             backdrop-filter: none;
+            font-family: 'Rockwell', 'Courier New', serif;
         }
 
         .cancellation-policy {
@@ -187,6 +210,7 @@
         .contact-info {
             font-size: 15px;
             color: var(--purple);
+            font-family: 'Rockwell', 'Courier New', serif;
         }
 
         .contact-info a {
@@ -202,7 +226,7 @@
                 max-width: 180px;
             }
             .section-header {
-                font-size: 26px;
+                font-size: 28px;
                 padding: 6px 12px;
             }
             .service-content {
@@ -218,6 +242,24 @@
             .service-right {
                 align-self: flex-end;
             }
+
+            .service-button {
+                font-size: 14px;
+                padding: 14px 16px;
+            }
+
+            .service-name {
+                font-size: 18px;
+            }
+
+            .service-description {
+                font-size: 13px;
+            }
+
+            .reserve-button {
+                font-size: 18px;
+                padding: 14px 28px;
+            }
         }
     </style>
 </head>
@@ -227,6 +269,7 @@
         <!-- Replace text headline with logo instead -->
         <img src="logo.png" alt="Salon Provence logo" class="logo-img">
         <div class="validity">platnost od 1.8.2025</div>
+        <a href="https://salon-provence.snippet.myfox.cz/form/show/date_2025-08-01/shopId_ck9mhy71ha13i0b835qe3zm6w/lng_cs" class="reserve-button" target="_blank">Rezervovat</a>
     </div>
 
     <div class="section-header">Pedikúra</div>
@@ -488,7 +531,7 @@
     <button class="service-button">
         <div class="service-content">
             <div class="service-details">
-                <div class="service-name">Brussova masáž páteře</div>
+                <div class="service-name">Breussova masáž páteře</div>
             </div>
             <div class="service-right">
                 <div class="service-duration">45 min</div>
