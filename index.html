@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Provence - Ceník služeb</title>
-    <!-- Dreaming Out Loud Script Slant from Typekit -->
+    <!-- Fairwater Script from Typekit -->
     <link rel="stylesheet" href="https://use.typekit.net/kmg2onn.css">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preload" href="https://use.typekit.net/kmg2onn.css" as="style">
     <style>
         :root {
             --glass-bg: rgba(255, 255, 255, 0.45);
@@ -118,8 +120,9 @@
             display: inline-block;
             text-align: center;
             width: 100%;
-            font-family: "fairwater-script", sans-serif;
+            font-family: "fairwater-script", "dreaming-outloud-scriptslant", cursive, sans-serif;
             font-style: normal;
+            font-display: swap;
         }
 
         .service-button {
@@ -136,8 +139,8 @@
             transition: 
                 background 0.3s ease,
                 box-shadow 0.3s ease,
-                border 0.3s;
-            font-family: 'Rockwell', 'Courier New', serif;
+                border 0.3s ease,
+                color 0.3s ease;
             border-radius: 16px;
             box-shadow: var(--glass-shadow);
             backdrop-filter: blur(9px) saturate(140%);
