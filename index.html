@@ -107,7 +107,7 @@
 
         .section-header {
             font-size: 48px;
-            font-weight: 400;
+            font-weight: 700;
             margin: 40px 0 28px 0;
             color: var(--dark-purple);
             letter-spacing: 0.5px;
@@ -118,18 +118,8 @@
             display: inline-block;
             text-align: center;
             width: 100%;
-        }
-
-        .section-header img {
-            height: 80px;
-            width: 280px;
-            display: block;
-            object-fit: contain;
-            margin: 0 auto;
-        }
-
-        .section-header img[src="masaze.png"] {
-            margin-left: calc(50% - 130px);
+            font-family: "fairwater-script", sans-serif;
+            font-style: normal;
         }
 
         .service-button {
@@ -241,6 +231,9 @@
         @media (max-width: 600px) {
             body {
                 padding: 10px;
+            .section-header {
+                font-size: 28px;
+                padding: 6px 12px;
             }
             .logo-img {
                 max-width: 180px;
@@ -293,9 +286,7 @@
         <a href="https://salon-provence.snippet.myfox.cz/form/show/date_2025-08-01/shopId_ck9mhy71ha13i0b835qe3zm6w/lng_cs" class="reserve-button" target="_blank">Rezervovat</a>
     </div>
 
-    <div class="section-header">
-        <img src="pedikura.png" alt="Pedikúra">
-    </div>
+    <div class="section-header">Pedikúra</div>
 
     <button class="service-button">
         <div class="service-content">
@@ -412,9 +403,7 @@
         </div>
     </button>
 
-    <div class="section-header">
-        <img src="kosmetika.png" alt="Kosmetika">
-    </div>
+    <div class="section-header">Kosmetika</div>
 
     <button class="service-button">
         <div class="service-content">
@@ -517,9 +506,7 @@
         </div>
     </button>
 
-    <div class="section-header">
-        <img src="masaze.png" alt="Masáže">
-    </div>
+    <div class="section-header">Masáže</div>
 
     <button class="service-button">
         <div class="service-content">
